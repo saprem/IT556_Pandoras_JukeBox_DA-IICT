@@ -17,17 +17,17 @@ Python 2
 ```
 pandas
 
-pip3 install pandas
+pip install pandas
 ```
 ```
 sklearn
 
-pip3 install sklearn
+pip install sklearn
 ```
 ```
 numpy
 
-pip3 install numpy
+pip install numpy
 ```
 
 ## How to start the engine? 
