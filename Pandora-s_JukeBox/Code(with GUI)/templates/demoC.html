@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Music Recommender</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" href={{ url_for('static', filename='bootstrap.min.css')}} rel="stylesheet">
+    <link type="text/css" href={{ url_for('static', filename='bootstrap-select.min.css')}} rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link type="text/css" href={{ url_for('static', filename='cover.css')}} rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+	 <h1>Welcome to Pandora's juke Box</h1>
+  <body>
+        
+            <form action = "http://localhost:5000/recommend" method='post'>
+<table style = "width:100%">
+<tr>
+<th>Song</th>
+<th>Genre</th>
+<th>Artist</th>
+<th>Play</th>
+<th>Stop</th>
+<th>Like</th>
+<th>Disike</th>
+</tr>
+		
+<tr>
+<th>1) {{ slot1 }}</th>
+<th> {{ genre1 }}</th>
+<th>{{ artist1 }}</th>
+<th><input type="radio" name="s1p" value="P" onChange='showOp1()'/>Play</th>
+<th><input type="radio" name="s1p" value="S" id="s1p" disabled/>Stop</th>
+<th><input type="radio" name="s1l" value="L" id = "s1l" disabled/>Like</th>
+<th><input type="radio" name="s1l" value="D" id = "s1d" disabled/>Dislike</th>
+</tr>
+
+<tr>
+<th><label id=text1>2) {{ slot2 }}</label></th>
+<th> {{ genre2 }}</th>
+<th>{{ artist2 }}</th>
+<th><input type="radio" name="s2p" value="P" onChange='showOp2()'/>Play</th>
+<th><input type="radio" name="s2p" value="S" id="s2p" disabled/>Stop</th>
+<th><input type="radio" name="s2l" value="L" id="s2l" disabled/>Like</th>
+<th><input type="radio" name="s2l" value="D" id="s2d" disabled/>Dislike</th>
+<tr>
+
+<tr>
+<th><label id=text1>3) {{ slot3 }}</label></th>
+<th> {{ genre3 }}</th>
+<th>{{ artist3 }}</th>
+<th><input type="radio" name="s3p" value="P" onChange='showOp3()'/>Play</th>
+<th><input type="radio" name="s3p" value="S" id="s3p" disabled/>Stop</th>
+<th><input type="radio" name="s3l" value="L" id="s3l" disabled/>Like</th>
+<th><input type="radio" name="s3l" value="D" id="s3d" disabled/>Dislike</th>
+</tr>
+
+<tr>
+<th><label id=text1>4) {{ slot4 }}</label></th>
+<th> {{ genre4 }}</th>
+<th>{{ artist4 }}</th>
+<th><input type="radio" name="s4p" value="P" onChange='showOp4()'/>Play</th>
+<th><input type="radio" name="s4p" value="S" id="s4p" disabled/>Stop</th>
+<th><input type="radio" name="s4l" value="L" id="s4l" disabled/>Like</th>
+<th><input type="radio" name="s4l" value="D" id="s4d" disabled/>Dislike</th>
+</tr>
+
+<tr>
+<th><label id=text1>5) {{ slot5 }}</label></th>
+<th> {{ genre5 }}</th>
+<th>{{ artist5 }}</th>
+<th><input type="radio" name="s5p" value="P" onChange='showOp5()'/>Play</th>
+<th><input type="radio" name="s5p" value="S" id="s5p" disabled/>Stop</th>
+<th><input type="radio" name="s5l" value="L" id="s5l" disabled/>Like</th>
+<th><input type="radio" name="s5l" value="D" id="s5d" disabled/>Dislike</th>
+</tr>
+
+<tr>
+<th><label id=text1>6) {{ slot6 }}</label></th>
+<th> {{ genre6 }}</th>
+<th>{{ artist6 }}</th>
+<th><input type="radio" name="s6p" value="P" onChange='showOp6()'/>Play</th>
+<th><input type="radio" name="s6p" value="S" id="s6p" disabled/>Stop</th>
+<th><input type="radio" name="s6l" value="L" id="s6l" disabled/>Like</th>
+<th><input type="radio" name="s6l" value="D" id="s6d" disabled/>Dislike</th>
+</tr>
+</table>
+<ul>
+<br><br>
+<input type="submit" value="Get Recommedations" id='getRecommendationsBtn' class="btn btn-lg btn-default"/>
+</ul>
+</form>
+                  
+    <script>
+	function showOp1() {
+		document.getElementById("s1p").disabled = false;
+		document.getElementById("s1l").disabled = false;
+		document.getElementById("s1d").disabled = false;
+	}
+	
+	function showOp2() {
+		document.getElementById("s2p").disabled = false;
+		document.getElementById("s2l").disabled = false;
+		document.getElementById("s2d").disabled = false;
+	}
+
+	function showOp3() {
+		document.getElementById("s3p").disabled = false;
+		document.getElementById("s3l").disabled = false;
+		document.getElementById("s3d").disabled = false;
+	}
+
+	function showOp4() {
+		document.getElementById("s4p").disabled = false;
+		document.getElementById("s4l").disabled = false;
+		document.getElementById("s4d").disabled = false;
+	}
+
+	function showOp5() {
+		document.getElementById("s5p").disabled = false;
+		document.getElementById("s5l").disabled = false;
+		document.getElementById("s5d").disabled = false;
+	}
+
+	function showOp6() {
+		document.getElementById("s6p").disabled = false;
+		document.getElementById("s6l").disabled = false;
+		document.getElementById("s6d").disabled = false;
+	}
+    </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src={{ url_for('static', filename='jquery.min.js')}}></script>
+    <script type="text/javascript" src={{ url_for('static', filename='bootstrap.min.js')}}></script>
+    <script type="text/javascript" src={{ url_for('static', filename='bootstrap-select.min.js')}}></script>
+    <script type="text/javascript" src={{ url_for('static', filename='d.js')}}></script>
+  </body>
+</html>
