@@ -17,3 +17,15 @@ Pandora's Jukebox is a personalized music recommendation system based on multi a
 * ``` python recoConsole.py ```
 * Copy the server url and paste it into the browser
 
+
+## Authors
+
+* **Saprem Shah** - *201401107* 
+* **Saloni Mundra** - *201501016* 
+* **Shubham Annadate** - *201501020* 
+* **Kruti Sheth** - *201501180*
+* **Aashka Kapadia** - *201501187*
+
+## Acknowledgments
+
+* Prof Sourish Dasgupta- For his guidance
