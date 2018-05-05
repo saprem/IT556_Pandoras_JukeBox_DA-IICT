@@ -11,22 +11,18 @@ Pandora's Jukebox is a personalized music recommendation system based on multi a
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-```
-Python 2
-```
-```
-pandas
+* Python 2
 
+* pandas
+```
 pip install pandas
 ```
+* sklearn
 ```
-sklearn
-
 pip install sklearn
 ```
+* numpy
 ```
-numpy
-
 pip install numpy
 ```
 
