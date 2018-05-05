@@ -32,13 +32,13 @@ pip3 install numpy
 
 ## How to start the engine? 
 * Download this repository
-* ``` cd PandorasJukeBox ```
-* ``` python reco.py ```
-### How to start the application? ###
-
-* Download this repository.
 * ``` cd Console ```
 * ``` python recoConsole.py ```
+### How to start the GUI based application? ###
+
+* Download this repository.
+* ``` cd Pandora's_Jukebox ```
+* ``` python reco.py ```
 * Copy the server url and paste it into the browser
 
 
@@ -52,4 +52,4 @@ pip3 install numpy
 
 ## Acknowledgments
 
-* Prof Sourish Dasgupta- For his guidance
+* Prof Sourish Dasgupta - For his guidance
