@@ -1,4 +1,4 @@
-## Music Recommendation System 
+# Music Recommendation System 
 Pandora's Jukebox is a personalized music recommendation system based on multi armed bandits with a flavour of content based recommendation. 
 
 * The recommendations are based on the user’s choice of genre and artist. These two are the arms (genre) and subarm (artist) that the user pulls. 
@@ -6,6 +6,29 @@ Pandora's Jukebox is a personalized music recommendation system based on multi a
 * It helps to explore different music. It is based on a modified epsilon greedy policy which takes the serendipity factor into consideration. 
 * The cold start problem is taken care of by asking the user of his preferences of genre during sign up. 
 * It also takes into account the current mood of the user by updating the arms values accordingly. 
+
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+```
+Python 2
+```
+```
+pandas
+
+pip3 install pandas
+```
+```
+sklearn
+
+pip3 install sklearn
+```
+```
+numpy
+
+pip3 install numpy
+```
 
 ## How to start the engine? 
 * Download this repository
